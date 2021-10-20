@@ -42,12 +42,12 @@ class _ProfileTabState extends State<ProfileTab> {
                               fit: BoxFit.cover,
                               height: ScreenUtil().setHeight(350.0),
                               width: ScreenUtil().setWidth(430.0),
-                              image: new AssetImage(
-                                  'assets/images/abhishekProfile.JPG')),
+                              image:
+                                  new AssetImage('assets/images/estelle.jpg')),
                         ),
                         new SizedBox(height: ScreenUtil().setHeight(10.0)),
                         new Text(
-                          "Abhishek, 19",
+                          "Estelle, 22",
                           style: new TextStyle(
                               letterSpacing: 1.1,
                               fontSize: ScreenUtil().setSp(70),

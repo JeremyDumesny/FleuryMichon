@@ -9,8 +9,7 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-
-  GlobalKey<ScaffoldState> _scaffoldkey = new GlobalKey<ScaffoldState>() ;
+  GlobalKey<ScaffoldState> _scaffoldkey = new GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +40,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       new SizedBox(width: ScreenUtil().setWidth(10.0)),
                       new Text(
-                        "tinder",
+                        "Fleury Michon",
                         style: new TextStyle(
                             fontSize: ScreenUtil().setSp(140.0),
                             letterSpacing: 1.2,
@@ -103,7 +102,6 @@ class _LoginScreenState extends State<LoginScreen> {
                               var snkBAr = new SnackBar(
                                   content: new Text(
                                       "You can add this feature dev 😍"));
-
                             },
                             child: new Row(
                               mainAxisAlignment: MainAxisAlignment.center,
