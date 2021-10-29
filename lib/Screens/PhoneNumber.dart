@@ -72,7 +72,7 @@ class PhoneNumberScreen extends StatelessWidget {
                       height: ScreenUtil().setHeight(60.0),
                     ),
                     new Text(
-                      'When you tap "Continue",Tinder will send a text a with verification code. Message and data rates may apply.\nThe verified phone number can be used to log in. Learn what happens when your number changes.',
+                      'When you tap "Continue", FleuryMichon will send a text a with verification code. Message and data rates may apply.\nThe verified phone number can be used to log in. Learn what happens when your number changes.',
                       style: new TextStyle(
                           fontSize: ScreenUtil().setSp(37.0),
                           fontWeight: FontWeight.w500,

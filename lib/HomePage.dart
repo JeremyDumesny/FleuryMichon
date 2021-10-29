@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage>
           automaticallyImplyLeading: false,
           elevation: 1,
           title: new TabBar(
+              padding: EdgeInsets.only(bottom: 15),
               indicatorColor: Colors.transparent,
               controller: _tabcontroller,
               tabs: [
@@ -53,11 +54,11 @@ class _HomePageState extends State<HomePage>
                     padding: EdgeInsets.all(ScreenUtil().setWidth(20.0)),
                     child: Center(
                       child: new Icon(
-                        Tinder_clone.iconfinder_338_tinder_logo_4375488__1_,
+                        Icons.food_bank,
                         color: _tabcontroller.index == 1
                             ? Theme.of(context).primaryColor
                             : Colors.grey,
-                        size: ScreenUtil().setSp(80.0),
+                        size: ScreenUtil().setSp(100.0),
                       ),
                     ),
                   ),

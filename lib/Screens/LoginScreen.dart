@@ -33,11 +33,6 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: new Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      new Icon(
-                        Tinder_clone.iconfinder_338_tinder_logo_4375488__1_,
-                        color: Colors.white,
-                        size: ScreenUtil().setSp(180.0),
-                      ),
                       new SizedBox(width: ScreenUtil().setWidth(10.0)),
                       new Text(
                         "Fleury Michon",
@@ -90,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         new SizedBox(height: ScreenUtil().setHeight(30.0)),
-                        new Container(
+                        /*new Container(
                           width: double.infinity,
                           height: ScreenUtil().setHeight(105.0),
                           child: new RaisedButton(
@@ -114,7 +109,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ],
                             ),
                           ),
-                        ),
+                        ),*/
                         new SizedBox(height: ScreenUtil().setHeight(70.0)),
                         new Text(
                           "Trouble logging in?",

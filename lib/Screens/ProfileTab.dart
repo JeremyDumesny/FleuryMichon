@@ -197,7 +197,7 @@ class _ProfileTabState extends State<ProfileTab> {
             ),
           ),
         ),
-        new Positioned(
+        /*new Positioned(
             bottom: ScreenUtil().setHeight(80.0),
             child: new Container(
               height: ScreenUtil().setHeight(350),
@@ -264,7 +264,7 @@ class _ProfileTabState extends State<ProfileTab> {
                   );
                 }).toList(),
               ),
-            ))
+            ))*/
       ],
     );
   }
