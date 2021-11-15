@@ -3,8 +3,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_tindercard/flutter_tindercard.dart';
-import 'package:tinder_clone/Models/PeopleList.dart';
-import 'package:tinder_clone/Widgets/MatchCard.dart';
+import 'package:tinder_clone/Models/Recipes.dart';
+import 'package:tinder_clone/Widgets/RecipeCard.dart';
 
 class TinderTab extends StatefulWidget {
   @override
@@ -26,7 +26,9 @@ class _TinderTabState extends State<TinderTab>
           duration: new Duration(milliseconds: 600),
           curve: Curves.fastLinearToSlowEaseIn,
           color: !atCenter
-              ? chng ? Colors.pinkAccent.shade200 : Colors.tealAccent.shade200
+              ? chng
+                  ? Colors.pinkAccent.shade200
+                  : Colors.tealAccent.shade200
               : Colors.blue.shade50,
           child: new Center(
             child: _triggerNotFound
@@ -59,8 +61,8 @@ class _TinderTabState extends State<TinderTab>
                                 width: ScreenUtil().setWidth(400),
                                 height: ScreenUtil().setWidth(400),
                                 fit: BoxFit.cover,
-                                image:
-                                    new AssetImage('assets/images/abhishekProfile.JPG')),
+                                image: new AssetImage(
+                                    'assets/images/abhishekProfile.JPG')),
                           ),
                           new SizedBox(
                             height: ScreenUtil().setHeight(40.0),
@@ -68,7 +70,8 @@ class _TinderTabState extends State<TinderTab>
                           new Padding(
                             padding: EdgeInsets.symmetric(
                                 horizontal: ScreenUtil().setWidth(60.0)),
-                            child: new Text("There is no one new around you ...",
+                            child: new Text(
+                                "There is no one new around you ...",
                                 textAlign: TextAlign.center,
                                 style: new TextStyle(
                                     wordSpacing: 1.2,
@@ -272,7 +275,7 @@ class _TinderTabState extends State<TinderTab>
             child: new TinderSwapCard(
               animDuration: 800,
               orientation: AmassOrientation.TOP,
-              totalNum: peoples.length,
+              totalNum: recipes.length,
               stackNum: 3,
               swipeEdge: 10.0,
               maxWidth: MediaQuery.of(context).size.width - 10.0,
@@ -280,7 +283,7 @@ class _TinderTabState extends State<TinderTab>
               minWidth: MediaQuery.of(context).size.width - 50.0,
               minHeight: MediaQuery.of(context).size.height * 0.73,
               cardBuilder: (context, index) {
-                return peoples[index];
+                return recipes[index];
               },
               cardController: _cardController,
               swipeUpdateCallback:
@@ -307,7 +310,7 @@ class _TinderTabState extends State<TinderTab>
                 /// Get orientation & index of swiped card!
                 setState(() {
                   atCenter = true;
-                  if (index == peoples.length - 1) {
+                  if (index == recipes.length - 1) {
                     _triggerNotFound = true;
                     Future.delayed(Duration(seconds: 5), () {
                       _timeout = true;

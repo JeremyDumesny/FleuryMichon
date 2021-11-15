@@ -3,20 +3,22 @@ import 'package:flutter/physics.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:math' as math;
 
-class MatchCard extends StatefulWidget {
+class RecipeCard extends StatefulWidget {
   final String name;
   final String imageURL;
-  final int age;
-  final String bio;
+  final String difficulty;
+  final String quantity;
+  final int prepTime;
+  final int cookTime;
 
-  MatchCard(@required this.name, @required this.imageURL, @required this.age,
-      @required this.bio);
+  RecipeCard(this.name, this.imageURL, this.difficulty, this.quantity,
+      this.prepTime, this.cookTime);
 
   @override
-  _MatchCardState createState() => _MatchCardState();
+  _RecipeCardState createState() => _RecipeCardState();
 }
 
-class _MatchCardState extends State<MatchCard> {
+class _RecipeCardState extends State<RecipeCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,7 +48,7 @@ class _MatchCardState extends State<MatchCard> {
             child: new ClipRRect(
               borderRadius: new BorderRadius.circular(10.0),
               child: new Image(
-                  fit: BoxFit.cover, image: new AssetImage(widget.imageURL)),
+                  fit: BoxFit.cover, image: AssetImage(widget.imageURL)),
             ),
           ),
           new Positioned(
@@ -77,7 +79,7 @@ class _MatchCardState extends State<MatchCard> {
                       width: ScreenUtil().setWidth(40.0),
                     ),
                     new Text(
-                      widget.age.toString(),
+                      widget.difficulty.toString(),
                       style: new TextStyle(
                           shadows: [
                             new Shadow(
@@ -95,7 +97,7 @@ class _MatchCardState extends State<MatchCard> {
                   height: ScreenUtil().setHeight(10.0),
                 ),
                 new Text(
-                  widget.bio,
+                  widget.quantity,
                   style: new TextStyle(
                       color: Colors.white,
                       shadows: [
